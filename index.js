@@ -10,6 +10,10 @@ app.get('/', (req,res)=>{
 app.use(express.json());
 app.use('/students', studentRoutes);
 
-app.listen(3000, ()=>{
-    console.log('Server is started');
+db.sync({force:true}).then(()=>{
+    app.listen(3000,()=>{
+        console.log('Server is started');
+    })
+}).catch((err)=>{
+   console.log(err);
 })
