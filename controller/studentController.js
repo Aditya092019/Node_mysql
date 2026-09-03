@@ -1,5 +1,6 @@
 // const db = require('../utils/db-connection');
-const Student = require('../models/index');
+const Student1 = require('../models/index');
+const Student = require('../models/studentModel');
 
 const addEntries = async (req,res)=>{
     try{    
